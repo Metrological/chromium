@@ -33,7 +33,6 @@
 
 import os, re, sys, string
 import jsmin
-import bz2
 
 
 def ToCAsciiArray(lines):
@@ -380,6 +379,7 @@ def JS2C(source, target, env):
   else:
     raw_sources_declaration = RAW_SOURCES_COMPRESSION_DECLARATION
     if env['COMPRESSION'] == 'bz2':
+      import bz2
       all_sources = bz2.compress("".join(all_sources))
     total_length = len(all_sources)
     sources_data = ToCArray(all_sources)
