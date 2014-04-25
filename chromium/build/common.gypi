@@ -283,10 +283,10 @@
       'python_ver%': '2.6',
 
       # Set NEON compilation flags.
-      'arm_neon%': 1,
+      'arm_neon%': 0,
 
       # Detect NEON support at run-time.
-      'arm_neon_optional%': 0,
+      'arm_neon_optional%': 1,
 
       # The system root for cross-compiles. Default: none.
       'sysroot%': '',
